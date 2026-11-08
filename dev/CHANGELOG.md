@@ -9,6 +9,10 @@ Diperbaiki:
 Diubah:
 ```
 
+## 2026-11-08: Temuan T-002
+Ditambah: dev/temuan/mbti/T-002-q5-kurang-bersih-sn.md
+Diubah: dev/PLAN.md, dev/PLANSPEC.md
+
 ## 2026-11-08: Arsip temuan
 Ditambah: dev/temuan/mbti/T-001-esfp-tidak-patuh-format.md
 Diubah: dev/PLAN.md, dev/PLANSPEC.md

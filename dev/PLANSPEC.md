@@ -184,3 +184,33 @@ Cek manual:
 - Buka dev/temuan/mbti/T-001-esfp-tidak-patuh-format.md. Hasil: semua label format terisi dan isinya bahasa Indonesia.
 - Bandingkan dua kutipan di T-001 dengan baris yang sama di answers.csv. Hasil: teksnya identik.
 - Jalankan git status --short sebelum commit. Hasil: hanya file di dev/ yang berubah, results/ dan src/ tidak ada.
+
+## Temuan T-002
+
+Tujuan: Mencatat temuan bahwa pertanyaan 5 di pilot MBTI kemungkinan kurang bersih mengukur dimensi S/N, sebagai temuan jenis kualitas instrumen.
+
+Tempat dan tampilan:
+- Tidak ada elemen tampilan baru.
+
+Folder kerja:
+- dev/temuan/mbti/
+- experiments/mbti/gemini-flash-lite/ (dibaca saja, tidak diubah)
+- results/mbti/gemini-flash-lite/ (dibaca saja, tidak diubah)
+
+Aturan:
+- Buat satu file: dev/temuan/mbti/T-002-q5-kurang-bersih-sn.md. Format sama persis dengan T-001 di folder yang sama (judul "# T-002: ...", lalu label Teori, Fase, Model, Persona, Jenis, Ringkasan, Bukti, Angka, Batasan, bahasa Indonesia).
+- Label Jenis diisi: kualitas instrumen. Label Persona diisi ESFP, dengan INTJ sebagai pembanding.
+- Ringkasan (maksimal tiga kalimat): persona ESFP menjawab A di pertanyaan 4 dan B di pertanyaan 5, padahal keduanya memiliki arah kunci yang sama (A = S, B = N). Pertanyaan 5 mencampur preferensi S/N dengan ciri spontan atau suka hal baru, dan hal itu diduga membuat ESFP condong ke opsi B.
+- Bukti: kutip teks pertanyaan 4 dan 5 persis dari experiments/mbti/gemini-flash-lite/questions.json (skenario, option_a, option_b, pole_a, pole_b), serta baris ESFP dan INTJ untuk pertanyaan 4 dan 5 dari results/mbti/gemini-flash-lite/answers.csv, dengan nomor baris CSV. Hitungan S/N diambil dari summary.json.
+- Angka: ESFP pertanyaan 4 = A tiga dari tiga ulangan, pertanyaan 5 = B tiga dari tiga ulangan. INTJ = B enam dari enam di kedua pertanyaan. Angka ini harus dicocokkan dengan file sumber sebelum ditulis.
+- Batasan wajib menyebut: penyebab di Ringkasan adalah dugaan dan belum terbukti. Hanya ada dua pertanyaan S/N, satu model, satu kali jalan, dan tiga ulangan hampir identik sehingga datanya setara dua butir unik per persona. Temuan ini tidak memengaruhi Fase 2 karena Fase 2 memakai OEJTS, bukan 10 pertanyaan pilot.
+- experiments/ dan results/ tidak diubah sama sekali, termasuk questions.json, answers.csv, dan summary.json.
+- Sengaja tidak dilakukan: revisi pertanyaan 5, perubahan skrip di src/, temuan lain, indeks atau tabel perbandingan, dan perubahan README.
+
+Data:
+- Tidak ada perubahan struktur data, sinkron Drive, ekspor, atau impor.
+
+Cek manual:
+- Buka dev/temuan/mbti/T-002-q5-kurang-bersih-sn.md. Hasil: semua label terisi, format sama dengan T-001.
+- Bandingkan kutipan pertanyaan dan baris jawaban di T-002 dengan sumbernya. Hasil: teksnya identik dan angkanya cocok.
+- Jalankan git status --short sebelum commit. Hasil: hanya file di dev/ yang berubah, experiments/, results/, dan src/ tidak ada.

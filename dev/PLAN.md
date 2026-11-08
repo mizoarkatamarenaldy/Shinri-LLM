@@ -28,5 +28,6 @@ Deskripsi singkat: proyek belajar sekaligus portofolio, eksperimen psikometri pa
 - [x] Aturan arsip per versi
 - [x] Koreksi nama Shinri-LLM
 - [x] Arsip temuan
+- [x] Temuan T-002
 
 Catatan: spek Fase 1 sampai 5 ditulis di dev/PLANSPEC.md saat sesi fase itu dikerjakan.
