@@ -152,3 +152,35 @@ Cek manual:
 - Jalankan skrip dengan key valid di .env. Hasil: file jawaban berisi 60 baris dan file ringkasan terbentuk di results/mbti/gemini-flash-lite/.
 - Jalankan skrip tanpa key di .env. Hasil: skrip berhenti dengan pesan jelas dan tidak membuat file hasil.
 - Jalankan git status --short. Hasil: .env tidak muncul, dan tidak ada file di luar item ini selain file dev yang diizinkan.
+
+## Arsip temuan
+
+Tujuan: Membuat tempat di dev/ untuk mengarsipkan temuan sampingan dari eksperimen, satu file per temuan, dikelompokkan per teori. Dimulai dari temuan jawaban ESFP yang tidak patuh format di Fase 1, supaya temuan bisa dibandingkan satu sama lain di fase berikutnya.
+
+Tempat dan tampilan:
+- Tidak ada elemen tampilan baru.
+
+Folder kerja:
+- dev/temuan/mbti/
+- results/mbti/gemini-flash-lite/ (dibaca saja, tidak diubah)
+
+Aturan:
+- Satu temuan satu file Markdown, ditaruh di folder teori yang sesuai. Temuan MBTI ada di dev/temuan/mbti/.
+- Nama file: nomor temuan, tanda hubung, judul singkat huruf kecil dengan tanda hubung. Nomor berurutan lintas semua teori (T-001, T-002, dan seterusnya), tidak mulai ulang di tiap folder teori.
+- Semua temuan ditulis dalam bahasa Indonesia dengan format yang sama: judul "# T-001: [judul singkat]", lalu baris berlabel Teori, Fase, Model (ID persis dari kolom model_id), Persona, Jenis, Ringkasan (maksimal tiga kalimat), Bukti (path file dan nomor baris), Angka, dan Batasan.
+- Label Jenis diisi salah satu dari: perilaku model, kualitas instrumen, atau pola jawaban.
+- Entri pertama adalah dev/temuan/mbti/T-001-esfp-tidak-patuh-format.md. Isinya: dua jawaban ESFP tidak berformat A atau B murni. Jawaban A atau B memang diberikan di awal teks, tetapi model lanjut menulis kalimat bergaya persona dengan emoji. Label Persona diisi ESFP, dengan INTJ sebagai pembanding.
+- Isi T-001 diambil dari results/mbti/gemini-flash-lite/answers.csv dan summary.json. Baca hanya baris ESFP pertanyaan 2 dan 10, serta baris yang jawabannya bukan A atau B. Bukti menyebut kedua baris itu (ESFP pertanyaan 2 ulangan 3, dan ESFP pertanyaan 10 ulangan 2), dengan nomor baris di berkas CSV.
+- Teks mentah kedua jawaban itu disalin persis dari answers.csv sebagai kutipan blok, tidak diketik ulang dan tidak diubah.
+- Angka T-001: ESFP 2 dari 30 jawaban tidak berformat A atau B murni, INTJ 0 dari 30. Kalau dihitung dari huruf awal, kedua jawaban itu tetap bermakna A dan B.
+- Batasan T-001 wajib menyebut: satu model, satu kali jalan, 30 panggilan per persona, jadi ini temuan sampingan dan bukan bukti bahwa tipe kepribadian tertentu lebih sulit patuh format.
+- results/ tidak diubah sama sekali, termasuk answers.csv dan summary.json. Hitungan "invalid" di summary.json dibiarkan apa adanya.
+- Sengaja tidak dilakukan: temuan lain (misalnya soal pertanyaan S/N), indeks atau tabel perbandingan, perbaikan parser, perubahan skrip di src/, perubahan README, dan perubahan dev/RULES.md.
+
+Data:
+- Tidak ada perubahan struktur data, sinkron Drive, ekspor, atau impor.
+
+Cek manual:
+- Buka dev/temuan/mbti/T-001-esfp-tidak-patuh-format.md. Hasil: semua label format terisi dan isinya bahasa Indonesia.
+- Bandingkan dua kutipan di T-001 dengan baris yang sama di answers.csv. Hasil: teksnya identik.
+- Jalankan git status --short sebelum commit. Hasil: hanya file di dev/ yang berubah, results/ dan src/ tidak ada.
