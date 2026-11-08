@@ -61,3 +61,33 @@ Cek manual:
 - `git ls-files dev/` menampilkan tepat empat file: dev/RULES.md, dev/PLAN.md, dev/PLANSPEC.md, dev/CHANGELOG.md.
 - `git status --short` bersih dan tidak ada perubahan di luar dev/.
 - Judul item "Buat dokumen dev" di dev/PLAN.md sama persis dengan judul bagian di dev/PLANSPEC.md.
+
+## Aturan arsip per versi
+
+Tujuan: Menetapkan bahwa satu versi mewakili satu teori, dan menyiapkan aturan mengarsipkan CHANGELOG dan PLANSPEC per versi supaya file aktif tetap kecil saat repo membesar. Item ini hanya mengubah dokumen di dev/.
+
+Tempat dan tampilan:
+- Tidak ada elemen tampilan baru.
+
+Izin dari pemilik:
+- Item ini boleh menambah satu baris ke bagian "Keputusan terkunci" di dev/PLAN.md, persis seperti teks di bawah. Tidak boleh mengubah baris lain di bagian itu.
+- Item ini boleh mengubah dev/RULES.md hanya pada dua hal yang disebut di bawah.
+
+Aturan:
+- Tambahkan di akhir bagian "Keputusan terkunci" di dev/PLAN.md satu baris: "Satu versi mewakili satu teori. v0.1.0 adalah MBTI. Pekerjaan lintas teori masuk ke versi yang sedang dikerjakan."
+- Tambahkan di bawah baris "WAJIB baca dev/RULES.md dulu..." di dev/PLAN.md satu baris: "Spek tiap versi yang sudah rilis ada di dev/arsip/vX.Y.Z/PLANSPEC.md."
+- Tambahkan di akhir dev/RULES.md dua aturan ini:
+  - "Baca hanya dev/CHANGELOG.md dan dev/PLANSPEC.md yang aktif. Arsip ada di dev/arsip/vX.Y.Z/, tidak dibaca kecuali pemilik memintanya atau item yang dikerjakan menyentuh pekerjaan versi lama. Dalam kasus itu buka hanya bagian yang terkait."
+  - "Aturan rilis, berlaku hanya kalau pemilik memintanya lewat prompt: pindahkan dev/CHANGELOG.md lalu dev/PLANSPEC.md ke dev/arsip/vX.Y.Z/ dengan `git mv`, satu pemindahan per commit. Lalu buat file aktif baru berjudul versi berikutnya, berisi hanya entri dan spek setelah rilis itu. Agent tidak boleh memutuskan sendiri kapan rilis, dan dilarang membuat, mengubah, atau menghapus tag git."
+- Item ini sengaja TIDAK membuat folder dev/arsip/ dan tidak memindahkan file apa pun. Folder itu baru dibuat saat rilis pertama.
+- Jangan mengubah judul versi di dev/PLAN.md, dev/PLANSPEC.md, atau dev/CHANGELOG.md.
+
+Data:
+- Tidak ada perubahan struktur data, sinkron Drive, ekspor, atau impor.
+
+Cek manual:
+- dev/PLAN.md punya satu baris baru di Keputusan terkunci, satu baris baru di bawah baris WAJIB baca, dan satu checkbox baru "Aturan arsip per versi".
+- dev/RULES.md bertambah tepat dua aturan baru dan aturan lama tidak berubah.
+- Judul item "Aturan arsip per versi" di dev/PLAN.md sama persis dengan judul bagian di dev/PLANSPEC.md.
+- `git ls-files dev/` tetap tepat empat file dan tidak ada folder dev/arsip/.
+- `git status --short` bersih dan tidak ada perubahan di luar dev/.

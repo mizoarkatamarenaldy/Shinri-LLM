@@ -14,3 +14,5 @@
   Co-authored-by: Claude <noreply@anthropic.com>
   Co-authored-by: Gemini (Antigravity) <200291788+gemini-code-assist@users.noreply.github.com>
   (5) `git push` ke branch aktif, dilarang force push, dilarang membuat atau menghapus branch, dilarang mengubah git config; (6) kalau commit atau push gagal, berhenti dan laporkan errornya; (7) kabari file yang diubah dan hash commit.
+- Baca hanya dev/CHANGELOG.md dan dev/PLANSPEC.md yang aktif. Arsip ada di dev/arsip/vX.Y.Z/, tidak dibaca kecuali pemilik memintanya atau item yang dikerjakan menyentuh pekerjaan versi lama. Dalam kasus itu buka hanya bagian yang terkait.
+- Aturan rilis, berlaku hanya kalau pemilik memintanya lewat prompt: pindahkan dev/CHANGELOG.md lalu dev/PLANSPEC.md ke dev/arsip/vX.Y.Z/ dengan `git mv`, satu pemindahan per commit. Lalu buat file aktif baru berjudul versi berikutnya, berisi hanya entri dan spek setelah rilis itu. Agent tidak boleh memutuskan sendiri kapan rilis, dan dilarang membuat, mengubah, atau menghapus tag git.

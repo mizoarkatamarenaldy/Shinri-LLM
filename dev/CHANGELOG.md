@@ -9,6 +9,10 @@ Diperbaiki:
 Diubah:
 ```
 
+## 2026-11-08: Aturan arsip per versi
+Ditambah: aturan satu versi satu teori di dev/PLAN.md, aturan baca arsip dan aturan rilis di dev/RULES.md, spek di dev/PLANSPEC.md
+Diubah: dev/PLAN.md, dev/RULES.md, dev/PLANSPEC.md
+
 ## 2026-11-08: Buat dokumen dev
 Ditambah: dev/RULES.md, dev/PLAN.md, dev/PLANSPEC.md, dev/CHANGELOG.md
 

@@ -1,6 +1,7 @@
 # PLAN.md: shinri-llm
 
 WAJIB baca dev/RULES.md dulu. Spek tiap item ada di dev/PLANSPEC.md.
+Spek tiap versi yang sudah rilis ada di dev/arsip/vX.Y.Z/PLANSPEC.md.
 
 Deskripsi singkat: proyek belajar sekaligus portofolio, eksperimen psikometri pada persona LLM.
 
@@ -13,6 +14,7 @@ Deskripsi singkat: proyek belajar sekaligus portofolio, eksperimen psikometri pa
 - Model yang tersedia: Claude (Sonnet, Haiku), Gemini (Flash-Lite, Flash, Pro, Argon), Grok Fast.
 - Struktur: satu folder per instrumen atau model, bukan branch per teori. experiments/ dan results/ saling mirror.
 - Lisensi MIT, .gitignore template Python.
+- Satu versi mewakili satu teori. v0.1.0 adalah MBTI. Pekerjaan lintas teori masuk ke versi yang sedang dikerjakan.
 
 ## v0.1.0 (sedang dikerjakan)
 
@@ -23,5 +25,6 @@ Deskripsi singkat: proyek belajar sekaligus portofolio, eksperimen psikometri pa
 - [ ] Fase 4: Perluasan 16 persona
 - [ ] Fase 5: Analisis dan publikasi
 - [x] Buat dokumen dev
+- [x] Aturan arsip per versi
 
 Catatan: spek Fase 1 sampai 5 ditulis di dev/PLANSPEC.md saat sesi fase itu dikerjakan.
