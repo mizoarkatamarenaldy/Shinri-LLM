@@ -1,4 +1,4 @@
-# PLAN.md: shinri-llm
+# PLAN.md: Shinri-LLM
 
 WAJIB baca dev/RULES.md dulu. Spek tiap item ada di dev/PLANSPEC.md.
 Spek tiap versi yang sudah rilis ada di dev/arsip/vX.Y.Z/PLANSPEC.md.
@@ -7,7 +7,7 @@ Deskripsi singkat: proyek belajar sekaligus portofolio, eksperimen psikometri pa
 
 ## Keputusan terkunci
 
-- Nama repo shinri-llm, deskripsi bahasa Inggris "LLM persona psychometrics experiments", repo publik.
+- Nama repo Shinri-LLM, deskripsi bahasa Inggris "LLM persona psychometrics experiments", repo publik.
 - Tujuan: proyek belajar sekaligus portofolio.
 - Data diambil lewat API (bersih dari memori dan system prompt aplikasi). Sampel dari aplikasi hanya pembanding.
 - Biaya: Fase 1 dan 2 memakai Gemini gratis. OpenRouter baru dibeli saat Fase 3 siap (minimum $5).
@@ -26,5 +26,6 @@ Deskripsi singkat: proyek belajar sekaligus portofolio, eksperimen psikometri pa
 - [ ] Fase 5: Analisis dan publikasi
 - [x] Buat dokumen dev
 - [x] Aturan arsip per versi
+- [x] Koreksi nama Shinri-LLM
 
 Catatan: spek Fase 1 sampai 5 ditulis di dev/PLANSPEC.md saat sesi fase itu dikerjakan.

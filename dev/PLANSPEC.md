@@ -2,7 +2,7 @@
 
 ## Buat dokumen dev
 
-Tujuan: Menyiapkan dokumen kerja agent untuk repo shinri-llm (LLM persona psychometrics experiments), supaya sesi berikutnya konsisten dan satu sesi hanya mengerjakan satu item.
+Tujuan: Menyiapkan dokumen kerja agent untuk repo Shinri-LLM (LLM persona psychometrics experiments), supaya sesi berikutnya konsisten dan satu sesi hanya mengerjakan satu item.
 
 Tempat dan tampilan:
 - Tidak ada elemen tampilan baru.
@@ -90,4 +90,31 @@ Cek manual:
 - dev/RULES.md bertambah tepat dua aturan baru dan aturan lama tidak berubah.
 - Judul item "Aturan arsip per versi" di dev/PLAN.md sama persis dengan judul bagian di dev/PLANSPEC.md.
 - `git ls-files dev/` tetap tepat empat file dan tidak ada folder dev/arsip/.
+- `git status --short` bersih dan tidak ada perubahan di luar dev/.
+
+## Koreksi nama Shinri-LLM
+
+Tujuan: Menyeragamkan penulisan nama proyek menjadi "Shinri-LLM" (huruf S, L, L besar) di dokumen dev, karena sebelumnya tertulis "shinri-llm". Item ini hanya mengubah teks di dev/.
+
+Tempat dan tampilan:
+- Tidak ada elemen tampilan baru.
+
+Izin dari pemilik:
+- Item ini boleh mengubah satu baris di bagian "Keputusan terkunci" di dev/PLAN.md, yaitu baris yang diawali "Nama repo shinri-llm", hanya pada penulisan nama. Tidak boleh mengubah baris lain di bagian itu.
+- Item ini boleh mengubah teks bagian "## Buat dokumen dev" di dev/PLANSPEC.md, hanya pada penulisan nama. Aturan "Jangan ubah entri lama" dilonggarkan hanya untuk ini.
+
+Aturan:
+- Ganti penulisan "shinri-llm" menjadi "Shinri-LLM" hanya pada teks nama proyek di tiga tempat: judul dev/PLAN.md ("# PLAN.md: Shinri-LLM"), baris "Nama repo" di Keputusan terkunci (jadi "Nama repo Shinri-LLM, ..."), dan kalimat Tujuan di bagian "## Buat dokumen dev" di dev/PLANSPEC.md (jadi "untuk repo Shinri-LLM").
+- Jangan mengubah teks lain di baris-baris itu, termasuk deskripsi bahasa Inggris "LLM persona psychometrics experiments".
+- Jangan mengubah dev/RULES.md dan entri lama di dev/CHANGELOG.md.
+- Jangan menambah bagian, aturan, atau fase baru.
+
+Data:
+- Tidak ada perubahan struktur data, sinkron Drive, ekspor, atau impor.
+
+Cek manual:
+- Mencari "shinri-llm" (huruf kecil semua) di dev/ tidak menemukan hasil.
+- Mencari "Shinri-LLM" di dev/ menemukan tepat tiga baris pada dev/PLAN.md dan dev/PLANSPEC.md, ditambah baris item ini sendiri.
+- Judul item "Koreksi nama Shinri-LLM" di dev/PLAN.md sama persis dengan judul bagian di dev/PLANSPEC.md.
+- `git ls-files dev/` tidak menambah file baru.
 - `git status --short` bersih dan tidak ada perubahan di luar dev/.
