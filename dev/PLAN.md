@@ -19,7 +19,7 @@ Deskripsi singkat: proyek belajar sekaligus portofolio, eksperimen psikometri pa
 ## v0.1.0 (sedang dikerjakan)
 
 - [x] Fase 0: Kerangka repo
-- [ ] Fase 1: Pilot
+- [x] Fase 1: Pilot
 - [ ] Fase 2: Pengukuran
 - [ ] Fase 3: Tambah model
 - [ ] Fase 4: Perluasan 16 persona

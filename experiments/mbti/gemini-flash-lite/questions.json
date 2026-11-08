@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "dimension": "E/I",
+    "scenario": "Setelah minggu kerja yang panjang dan melelahkan, bagaimana caramu memulihkan energimu di akhir pekan?",
+    "option_a": "Menghadiri acara kumpul-kumpul ramai bersama teman dan kenalan baru.",
+    "option_b": "Menghabiskan waktu sendirian di rumah membaca buku atau menekuni hobi pribadi.",
+    "pole_a": "E",
+    "pole_b": "I"
+  },
+  {
+    "id": 2,
+    "dimension": "E/I",
+    "scenario": "Saat berada di sebuah konferensi atau seminar besar yang dihadiri banyak orang:",
+    "option_a": "Aktif menyapa orang-orang baru dan bersemangat memperluas jaringan pertemanan.",
+    "option_b": "Fokus mendengarkan materi dan hanya mengobrol dengan beberapa orang yang sudah dikenal dekat.",
+    "pole_a": "E",
+    "pole_b": "I"
+  },
+  {
+    "id": 3,
+    "dimension": "E/I",
+    "scenario": "Ketika sedang mencari jalan keluar atas suatu masalah yang rumit:",
+    "option_a": "Lebih suka langsung membicarakannya dan berdiskusi dengan orang lain untuk memicu ide.",
+    "option_b": "Lebih suka merenungkannya sendirian secara mendalam sebelum menyampaikannya ke orang lain.",
+    "pole_a": "E",
+    "pole_b": "I"
+  },
+  {
+    "id": 4,
+    "dimension": "S/N",
+    "scenario": "Dalam menerima dan memproses informasi baru, kamu lebih tertarik pada:",
+    "option_a": "Fakta konkret, rincian realistis, dan hal-hal praktis yang dapat langsung diterapkan.",
+    "option_b": "Konsep abstrak, pola tersembunyi, dan berbagai kemungkinan di masa depan.",
+    "pole_a": "S",
+    "pole_b": "N"
+  },
+  {
+    "id": 5,
+    "dimension": "S/N",
+    "scenario": "Saat mulai mengerjakan suatu proyek baru:",
+    "option_a": "Lebih menyukai metode teruji yang langkah-langkahnya jelas dan sudah terbukti berhasil.",
+    "option_b": "Lebih menyukai merancang pendekatan orisinal dan inovatif meski metodenya belum pernah dicoba.",
+    "pole_a": "S",
+    "pole_b": "N"
+  },
+  {
+    "id": 6,
+    "dimension": "T/F",
+    "scenario": "Ketika harus mengambil keputusan sulit yang berdampak pada banyak anggota tim:",
+    "option_a": "Mengutamakan logika, analisis objektif, dan prinsip keadilan tanpa memandang perasaan pribadi.",
+    "option_b": "Mengutamakan keharmonisan hubungan, perasaan anggota yang terlibat, dan nilai kemanusiaan.",
+    "pole_a": "T",
+    "pole_b": "F"
+  },
+  {
+    "id": 7,
+    "dimension": "T/F",
+    "scenario": "Saat seorang rekan dekat menceritakan masalah pribadi yang membuatnya sangat tertekan:",
+    "option_a": "Menganalisis pokok persoalan secara rasional dan langsung menawarkan langkah solusi yang efektif.",
+    "option_b": "Mendengarkan keluh kesahnya dengan empati dan memberikan dukungan emosional terlebih dahulu.",
+    "pole_a": "T",
+    "pole_b": "F"
+  },
+  {
+    "id": 8,
+    "dimension": "T/F",
+    "scenario": "Dalam menyampaikan evaluasi atau kritik terhadap hasil kerja orang lain:",
+    "option_a": "Menyampaikan evaluasi secara lugas, tegas, dan faktual agar masalah segera diperbaiki.",
+    "option_b": "Menyampaikan evaluasi dengan halus dan menjaga pemilihan kata agar tidak mengecilkan hati orang tersebut.",
+    "pole_a": "T",
+    "pole_b": "F"
+  },
+  {
+    "id": 9,
+    "dimension": "J/P",
+    "scenario": "Dalam menjalani aktivitas harian dan akhir pekan:",
+    "option_a": "Menyusun jadwal kegiatan yang teratur dan merasa nyaman jika rencana berjalan sesuai rencana.",
+    "option_b": "Membiarkan rencana tetap terbuka dan lebih suka memutuskan kegiatan secara spontan sesuai mood.",
+    "pole_a": "J",
+    "pole_b": "P"
+  },
+  {
+    "id": 10,
+    "dimension": "J/P",
+    "scenario": "Ketika memiliki tugas penting dengan tenggat waktu yang sudah ditentukan:",
+    "option_a": "Menyicil pekerjaan secara bertahap dan teratur agar selesai jauh sebelum batas akhir.",
+    "option_b": "Bekerja dengan ritme fleksibel dan sering kali menyelesaikan tugas dalam satu dorongan energi menjelang batas akhir.",
+    "pole_a": "J",
+    "pole_b": "P"
+  }
+]

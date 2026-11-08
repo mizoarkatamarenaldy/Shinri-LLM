@@ -118,3 +118,37 @@ Cek manual:
 - Judul item "Koreksi nama Shinri-LLM" di dev/PLAN.md sama persis dengan judul bagian di dev/PLANSPEC.md.
 - `git ls-files dev/` tidak menambah file baru.
 - `git status --short` bersih dan tidak ada perubahan di luar dev/.
+
+## Fase 1: Pilot
+
+Tujuan: Menguji apakah satu model murah memberi jawaban MBTI yang berbeda dan konsisten saat diberi dua persona berlawanan. Hasilnya menentukan apakah Fase 2 layak dilanjutkan.
+
+Tempat dan tampilan:
+- Tidak ada elemen tampilan baru.
+
+Folder kerja:
+- src/
+- experiments/mbti/gemini-flash-lite/
+- results/mbti/gemini-flash-lite/
+
+Aturan:
+- Persona ada dua: INTJ dan ESFP. Keduanya diberikan lewat system instruction dengan kalimat yang sama, hanya kode tipenya yang berbeda: "Kamu adalah seseorang dengan tipe kepribadian [TIPE]. Jawab semua pertanyaan sebagai orang itu."
+- Model: satu model Gemini Flash-Lite yang tersedia di free tier. Pengaturan generasi memakai nilai bawaan API.
+- Pertanyaan uji ada 10, ditulis sebagai skenario singkat dengan dua pilihan jawaban A atau B, dibagi rata ke empat dimensi (E/I, S/N, T/F, J/P, masing-masing 2 sampai 3 pertanyaan). Simpan di experiments/mbti/gemini-flash-lite/questions.json.
+- Tiap persona menjawab tiap pertanyaan 3 kali, satu panggilan API per jawaban. Total 60 panggilan.
+- Model diminta menjawab hanya dengan huruf A atau B. Jawaban yang bukan A atau B dicatat apa adanya sebagai tidak valid dan tidak diulang otomatis.
+- Beri jeda antar panggilan. Kalau API mengembalikan error kuota atau error otentikasi, berhenti dan laporkan. Jangan coba model atau provider lain.
+- Skrip membaca API key dari .env sesuai nama variabel di .env.example. Kalau key tidak ada, berhenti dan laporkan. Key tidak boleh ditulis ke file mana pun di repo.
+- Setiap baris hasil mencatat: persona, nomor pertanyaan, ulangan ke berapa, jawaban, ID model persis, provider, dan pengaturan yang dipakai.
+- Skrip juga membuat ringkasan: jumlah jawaban A dan B per persona per dimensi, dan konsistensi 3 ulangan per pertanyaan. Ringkasan hanya berisi angka, tanpa interpretasi.
+- Semua file di results/mbti/gemini-flash-lite/ dihasilkan oleh skrip di src/ dan experiments/mbti/gemini-flash-lite/, tidak ditulis tangan. Skrip ada di src/ kecuali berkas pertanyaan.
+- Kalau butuh dependensi Python, catat di requirements.txt.
+- Sengaja tidak dilakukan: OEJTS, model lain, persona selain dua itu, grafik, dan analisis.
+
+Data:
+- Tidak ada perubahan struktur data, sinkron Drive, ekspor, atau impor.
+
+Cek manual:
+- Jalankan skrip dengan key valid di .env. Hasil: file jawaban berisi 60 baris dan file ringkasan terbentuk di results/mbti/gemini-flash-lite/.
+- Jalankan skrip tanpa key di .env. Hasil: skrip berhenti dengan pesan jelas dan tidak membuat file hasil.
+- Jalankan git status --short. Hasil: .env tidak muncul, dan tidak ada file di luar item ini selain file dev yang diizinkan.

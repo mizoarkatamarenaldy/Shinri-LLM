@@ -9,6 +9,10 @@ Diperbaiki:
 Diubah:
 ```
 
+## 2026-11-08: Fase 1 Pilot
+Ditambah: src/pilot.py, experiments/mbti/gemini-flash-lite/questions.json, results/mbti/gemini-flash-lite/answers.csv, results/mbti/gemini-flash-lite/summary.json
+Diubah: dev/PLAN.md, dev/PLANSPEC.md
+
 ## 2026-11-08: Koreksi nama Shinri-LLM
 Diubah: dev/PLAN.md, dev/PLANSPEC.md
 
